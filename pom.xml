@@ -19,6 +19,7 @@
     <properties>
         <compiler.version>1.7</compiler.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <allure.version>1.4.1</allure.version>
     </properties>
 
     <organization>
@@ -74,7 +75,7 @@
         <dependency>
             <groupId>ru.yandex.qatools.allure</groupId>
             <artifactId>allure-java-commons</artifactId>
-            <version>1.4.0.RC4</version>
+            <version>${allure.version}</version>
         </dependency>
         <dependency>
             <groupId>org.spockframework</groupId>
