@@ -9,10 +9,8 @@ import org.spockframework.runtime.model.SpecInfo;
  */
 public class AllureSpockExtension extends AbstractGlobalExtension {
 
-    private static final SpockRunListener LISTENER = new SpockRunListener();
-
     @Override
     public void visitSpec(SpecInfo spec) {
-        spec.addListener(LISTENER);
+        spec.addListener(new SpockRunListener());
     }
 }
