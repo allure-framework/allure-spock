@@ -1,25 +1,27 @@
 package ru.yandex.qatools.allure.spock
 
+import org.junit.Rule
+import org.junit.rules.TemporaryFolder
 import org.junit.runner.JUnitCore
 import ru.yandex.qatools.allure.commons.AllureFileUtils
 import ru.yandex.qatools.allure.spock.testdata.SimpleSpec
 import ru.yandex.qatools.allure.utils.AllureResultsUtils
 import spock.lang.Specification
 
-import java.nio.file.Files
 
 class AllureSpockXmlReportSpec extends Specification {
 
-	def tmpFolder
+	@Rule
+	public TemporaryFolder tmpFolderRule = new TemporaryFolder()
+	private File tmpFolder
 
 	def setup() {
-		tmpFolder = Files.createTempDirectory("allure").toFile()
-//		tmpFolder = new File("c:\\temp\\")
+		tmpFolder = tmpFolderRule.newFolder("allure-spock-adapter-test")
 		AllureResultsUtils.setResultsDirectory(tmpFolder);
 
 	}
 
-	def "generate simple test repo"() {
+	def "generate simple test report"() {
 		when:
 			JUnitCore jUnitCore = new JUnitCore()
 			jUnitCore.run(SimpleSpec)
