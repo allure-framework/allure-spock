@@ -14,8 +14,8 @@ import ru.yandex.qatools.allure.events.TestCaseStartedEvent
 import ru.yandex.qatools.allure.events.TestSuiteStartedEvent
 import ru.yandex.qatools.allure.model.LabelName
 import ru.yandex.qatools.allure.model.Status
-import ru.yandex.qatools.allure.spock.testdata.SimpleAnnotatedSpec
-import ru.yandex.qatools.allure.spock.testdata.SimpleSpec
+import ru.yandex.qatools.allure.spock.testdata.SimpleAnnotatedSpecification
+import ru.yandex.qatools.allure.spock.testdata.SimpleSpecification
 import spock.lang.Specification
 
 class SpockRunListenerSpec extends Specification {
@@ -30,14 +30,14 @@ class SpockRunListenerSpec extends Specification {
 
 	def "TestSuiteStartedEvent is fired before Spec started"() {
 		given:
-			def spec = createSpecificationInfoFrom(SimpleSpec)
+			def spec = createSpecificationInfoFrom(SimpleSpecification)
 
 		when:
 			listener.beforeSpec(spec)
 
 		then:
 			1 * allure.fire({ TestSuiteStartedEvent event ->
-				assert event.name == "SimpleSpec"
+				assert event.name == "SimpleSpecification"
 				assert event.title == null
 				assert event.description == null
 				true
@@ -46,14 +46,14 @@ class SpockRunListenerSpec extends Specification {
 
 	def "TestSuiteStartedEvent is enriched with annotations"() {
 		given:
-			def spec = createSpecificationInfoFrom(SimpleAnnotatedSpec)
+			def spec = createSpecificationInfoFrom(SimpleAnnotatedSpecification)
 
 		when:
 			listener.beforeSpec(spec)
 
 		then:
 			1 * allure.fire({ TestSuiteStartedEvent event ->
-				assert event.name == "SimpleAnnotatedSpec"
+				assert event.name == "SimpleAnnotatedSpecification"
 				assert event.title == "Simple Specification"
 				assert event.description.value == "Simple Specification used for allure sock extension"
 				true
@@ -62,7 +62,7 @@ class SpockRunListenerSpec extends Specification {
 
 	def "TestCaseStartedEvent is fired before Feature started"() {
 		given:
-			def spec = createSpecificationInfoFrom(SimpleSpec)
+			def spec = createSpecificationInfoFrom(SimpleSpecification)
 
 		when:
 			listener.beforeFeature(spec.features.find({ it.name == spec.toFeatureName("successful test") }))
@@ -76,7 +76,7 @@ class SpockRunListenerSpec extends Specification {
 
 	def "TestCaseStartedEvent is enriched with annotation"() {
 		given:
-			def spec = createSpecificationInfoFrom(SimpleAnnotatedSpec)
+			def spec = createSpecificationInfoFrom(SimpleAnnotatedSpecification)
 
 		when:
 			listener.beforeFeature(spec.features.find({ it.name == spec.toFeatureName("successful test") }))
@@ -93,7 +93,7 @@ class SpockRunListenerSpec extends Specification {
 
 	def "TestCaseStartedEvent is not fired for data-driven feature when beforeFeature"() {
 		given:
-			def spec = createSpecificationInfoFrom(SimpleSpec)
+			def spec = createSpecificationInfoFrom(SimpleSpecification)
 
 		when:
 			listener.beforeFeature(spec.features.find({ it.name == spec.toFeatureName("parametrised test") }))
@@ -104,7 +104,7 @@ class SpockRunListenerSpec extends Specification {
 
 	def "TestCaseStartedEvent is fired for data-driven test beforeIteration"() {
 		given:
-			def spec = createSpecificationInfoFrom(SimpleSpec)
+			def spec = createSpecificationInfoFrom(SimpleSpecification)
 			FeatureInfo dataDrivenFeature = getFeatureInfo("successful test", spec)
 			IterationInfo iteration = createIterationInfo("successful test", spec, dataDrivenFeature)
 
@@ -117,7 +117,7 @@ class SpockRunListenerSpec extends Specification {
 
 	def "TestCaseStartedEvent is not fired when regular feature when beforeIteration"() {
 		given:
-			def spec = createSpecificationInfoFrom(SimpleSpec)
+			def spec = createSpecificationInfoFrom(SimpleSpecification)
 			FeatureInfo dataDrivenFeature = getFeatureInfo("parametrised test", spec)
 			IterationInfo iteration = createIterationInfo("parametrised test[0]", spec, dataDrivenFeature)
 
@@ -132,7 +132,7 @@ class SpockRunListenerSpec extends Specification {
 
 	def "TestCaseFinishedEvent is fired for regular feature afterFeature"() {
 		given:
-			def spec = createSpecificationInfoFrom(SimpleSpec)
+			def spec = createSpecificationInfoFrom(SimpleSpecification)
 
 		when:
 			listener.afterFeature(getFeatureInfo("successful test", spec))
@@ -143,7 +143,7 @@ class SpockRunListenerSpec extends Specification {
 
 	def "TestCaseFinishedEvent is not fired for data-driven feature when afterFeature"() {
 		given:
-			def spec = createSpecificationInfoFrom(SimpleSpec)
+			def spec = createSpecificationInfoFrom(SimpleSpecification)
 			FeatureInfo dataDrivenFeature = getFeatureInfo("parametrised test", spec)
 
 		when:
@@ -154,7 +154,7 @@ class SpockRunListenerSpec extends Specification {
 
 	def "TestCaseFinishedEvent is not fired for regular feature afterIteration"() {
 		given:
-			def spec = createSpecificationInfoFrom(SimpleSpec)
+			def spec = createSpecificationInfoFrom(SimpleSpecification)
 			FeatureInfo dataDrivenFeature = getFeatureInfo("successful test", spec)
 			IterationInfo iteration = createIterationInfo("successful test", spec, dataDrivenFeature)
 
@@ -167,7 +167,7 @@ class SpockRunListenerSpec extends Specification {
 
 	def "TestCaseFinishedEvent is fired for data-driven feature afterIteration"() {
 		given:
-			def spec = createSpecificationInfoFrom(SimpleSpec)
+			def spec = createSpecificationInfoFrom(SimpleSpecification)
 			FeatureInfo dataDrivenFeature = getFeatureInfo("parametrised test", spec)
 			IterationInfo iteration = createIterationInfo("parametrised test[0]", spec, dataDrivenFeature)
 
@@ -179,7 +179,7 @@ class SpockRunListenerSpec extends Specification {
 
 	def "TestCaseFailureEvent if fired when assertion error"() {
 		given:
-			def spec = createSpecificationInfoFrom(SimpleSpec)
+			def spec = createSpecificationInfoFrom(SimpleSpecification)
 			FeatureInfo failed = getFeatureInfo("failed test", spec)
 			def error = new AssertionError()
 			ErrorInfo errorInfo = new ErrorInfo(failed.getFeatureMethod(), error)

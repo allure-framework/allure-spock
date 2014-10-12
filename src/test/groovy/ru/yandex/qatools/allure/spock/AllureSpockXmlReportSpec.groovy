@@ -4,7 +4,7 @@ import org.junit.Rule
 import org.junit.rules.TemporaryFolder
 import org.junit.runner.JUnitCore
 import ru.yandex.qatools.allure.commons.AllureFileUtils
-import ru.yandex.qatools.allure.spock.testdata.SimpleSpec
+import ru.yandex.qatools.allure.spock.testdata.SimpleSpecification
 import ru.yandex.qatools.allure.utils.AllureResultsUtils
 import spock.lang.Specification
 
@@ -24,7 +24,7 @@ class AllureSpockXmlReportSpec extends Specification {
 	def "generate simple test report"() {
 		when:
 			JUnitCore jUnitCore = new JUnitCore()
-			jUnitCore.run(SimpleSpec)
+			jUnitCore.run(SimpleSpecification)
 
 		then:
 			AllureFileUtils.listTestSuiteFiles(tmpFolder).size() == 1

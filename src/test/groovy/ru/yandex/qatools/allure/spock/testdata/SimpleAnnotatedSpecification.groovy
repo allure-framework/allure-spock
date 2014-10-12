@@ -8,7 +8,7 @@ import spock.lang.Specification
 
 @Title("Simple Specification")
 @Description("Simple Specification used for allure sock extension")
-class SimpleAnnotatedSpec extends Specification {
+class SimpleAnnotatedSpecification extends Specification {
 
 	@Features("My Feature")
 	@Stories(["Story1", "Story2"])

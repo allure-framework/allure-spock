@@ -4,7 +4,7 @@ import spock.lang.Specification
 import spock.lang.Unroll
 
 
-class SimpleSpec extends Specification {
+class SimpleSpecification extends Specification {
 
 	def "successful test"() {
 		given: "input data"
