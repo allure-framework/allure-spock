@@ -78,7 +78,7 @@ public class SpockRunListener extends AbstractRunListener {
 
     @Override
     public void error(ErrorInfo error) {
-        lifecycle.fire(new TestCaseFailureEvent().withThrowable(error.getException()));
+        getLifecycle().fire(new TestCaseFailureEvent().withThrowable(error.getException()));
     }
 
     @Override
