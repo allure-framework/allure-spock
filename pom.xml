@@ -16,6 +16,13 @@
     <version>1.0-SNAPSHOT</version>
     <name>Allure Spock Adapter parent</name>
 
+    <properties>
+        <compiler.version>1.7</compiler.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <gmaven-plugin.version>1.4</gmaven-plugin.version>
+    </properties>
+
+
     <organization>
         <name>Yandex</name>
         <url>http://company.yandex.com</url>
@@ -67,6 +74,7 @@
  
     <modules>
         <module>spock-1.0</module>
+        <module>spock-0.7</module>
     </modules>
 
     <build>

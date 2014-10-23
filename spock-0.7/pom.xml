@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>allure-spock-1.0-adaptor</artifactId>
+    <artifactId>allure-spock-0.7-adaptor</artifactId>
 
     <parent>
         <groupId>ru.yandex.qatools.allure</groupId>
@@ -12,7 +12,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <name>Allure Spock 1.0 Adaptor</name>
+    <name>Allure Spock 0.7 Adaptor</name>
 
     <properties>
         <allure.version>1.4.1</allure.version>
@@ -28,7 +28,7 @@
         <dependency>
             <groupId>org.spockframework</groupId>
             <artifactId>spock-core</artifactId>
-            <version>1.0-groovy-2.0-SNAPSHOT</version>
+            <version>0.7-groovy-2.0</version>
         </dependency>
 
         <!-- test dependencies  -->
