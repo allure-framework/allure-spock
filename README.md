@@ -1,5 +1,9 @@
 ## Allure Spock Adaptor 
 
-The basis for allure spock adaptor. **Not released yet, use SNAPSHOT version**
+Allure adpater for [Spock Framework](http://spockframework.org).
+
+Spock Framework sources - https://github.com/spockframework/spock
+
+**Not released yet, use SNAPSHOT version**
 
 *Pull request are welcome!*
