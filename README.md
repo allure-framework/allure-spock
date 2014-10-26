@@ -1,6 +1,6 @@
 ## Allure Spock Adaptor 
 
-Allure adpater for [Spock Framework](http://spockframework.org).
+[Allure](http://allure.qatools.ru) adpater for [Spock Framework](http://spockframework.org).
 
 Spock Framework sources - https://github.com/spockframework/spock
 
@@ -14,6 +14,6 @@ Spock Framework sources - https://github.com/spockframework/spock
 
 ### Example
 
-
+[TODO]
 
 *Pull request are welcome!*
