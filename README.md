@@ -2,7 +2,7 @@
 
 [![release](http://github-release-version.herokuapp.com/github/allure-framework/allure-spock-adaptor/release.svg?style=flat)](https://github.com/allure-framework/allure-spock-adaptor/releases/latest) [![build](https://img.shields.io/teamcity/http/teamcity.qatools.ru/s/allure_SpokAdaptor_MasterDeploy.svg?style=flat)](http://teamcity.qatools.ru/viewType.html?buildTypeId=allure_SpokAdaptor_MasterDeploy&guest=1)
 
-[Allure](http://allure.qatools.ru) adpater for [Spock Framework](http://spockframework.org).
+[Allure](http://allure.qatools.ru) adapter for [Spock Framework](http://spockframework.org).
 
 Spock Framework sources - https://github.com/spockframework/spock
 
