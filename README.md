@@ -18,4 +18,4 @@ Spock Framework sources - https://github.com/spockframework/spock
 
 [TODO]
 
-*Pull request are welcome!*
+*Pull requests are welcome!*
