@@ -7,7 +7,7 @@ import ru.yandex.qatools.allure.annotations.Title
 import spock.lang.Specification
 
 @Title("Simple Specification")
-@Description("Simple Specification used for allure sock extension")
+@Description("Simple Specification used for allure spock extension")
 class SimpleAnnotatedSpecification extends Specification {
 
 	@Features("My Feature")
