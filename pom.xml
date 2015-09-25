@@ -17,7 +17,7 @@
     <name>Allure Spock Adapter parent</name>
 
     <properties>
-        <allure.version>1.4.1</allure.version>
+        <allure.version>1.4.15</allure.version>
         <compiler.version>1.7</compiler.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <gmaven-plugin.version>1.4</gmaven-plugin.version>
