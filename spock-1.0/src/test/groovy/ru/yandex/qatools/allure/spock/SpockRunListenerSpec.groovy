@@ -55,7 +55,7 @@ class SpockRunListenerSpec extends Specification {
 			1 * allure.fire({ TestSuiteStartedEvent event ->
 				assert event.name == "SimpleAnnotatedSpecification"
 				assert event.title == "Simple Specification"
-				assert event.description.value == "Simple Specification used for allure sock extension"
+				assert event.description.value == "Simple Specification used for allure spock extension"
 				true
 			})
 	}
