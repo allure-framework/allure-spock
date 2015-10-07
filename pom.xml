@@ -14,7 +14,7 @@
     <artifactId>allure-spock-adaptor-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>Allure Spock Adapter parent</name>
+    <name>Allure Spock Adapter</name>
 
     <properties>
         <allure.version>1.4.15</allure.version>
