@@ -40,7 +40,7 @@
     <scm>
         <url>https://github.com/allure-framework/allure-spock-adaptor</url>
         <connection>scm:git@github.com:allure-framework/allure-spock-adaptor.git</connection>
-        <developerConnection>scm:git@github.com:allure-framework/allure-spock-adaptor.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:allure-framework/allure-spock-adaptor.git</developerConnection>
     </scm>
 
     <issueManagement>
@@ -49,8 +49,8 @@
     </issueManagement>
 
     <ciManagement>
-        <system>TeamCity</system>
-        <url>http://teamcity.qatools.ru/</url>
+        <system>Jenkins</system>
+        <url>http://ci.qatools.ru/</url>
     </ciManagement>
 
     <developers>
