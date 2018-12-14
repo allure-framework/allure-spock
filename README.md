@@ -1,4 +1,7 @@
-## Allure Spock Adaptor 
+# [DEPRICATED]
+## Please follow https://github.com/allure-framework/allure-java
+Allure Spock Adaptor 
+=====================
 
 [![release](http://github-release-version.herokuapp.com/github/allure-framework/allure-spock-adaptor-parent/release.svg?style=flat)](https://github.com/allure-framework/allure-spock-adaptor-parent/releases/latest)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/ru.yandex.qatools.allure/allure-spock-adaptor-parent/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/ru.yandex.qatools.allure/allure-spock-adaptor-parent)
